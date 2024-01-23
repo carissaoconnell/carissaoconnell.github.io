@@ -204,6 +204,9 @@
 .icon-camera:before {
   content: "\e96b";
 }
+.icon-read:after {
+  content: "\f0a9"
+}
 .icon-upload:before {
   content: "\e96c";
 }
@@ -1205,6 +1208,12 @@
 }
 .icon-tag:before {
   content: "\e0b9";
+}
+.icon-comment:before {
+  content: "\f075";
+}
+.icon-write:before {
+  content: "\f040"
 }
 .icon-power2:before {
   content: "\e0ba";
