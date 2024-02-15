@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>blog08</title>
+    <title>blog04</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -39,6 +39,7 @@
 
     <!-- loader stylesheet -->
     <link rel="stylesheet" href="underwater-pure-css-animation/dist/stle.css"> 
+
   </head>
 
   <body>
@@ -50,7 +51,7 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpeg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Carissa O'Connell</a></h1>
-				<span class="position"><a href="index.html">Software Developer</a> from Hawaii </span>
+				<span class="position"><a href="#">Software Developer</a> from Hawaii </span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
@@ -89,7 +90,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				<div class="js-fullheight d-flex justify-content-center align-items-center">
 					<div class="col-md-8 text text-center">
 						<div class="desc">
-							<h7 class="subheading"><b>Joins in SQL</b></h7>
+							<h7 class="subheading"><b>Views in SQL</b></h7>
 							<p><a href="index.html" class="btn-custom mr-2">Home</a></p>
 							<a href="blog-MainIndex.html" class="btn-custom mr-2">Blog</a></p>
 						</div>
@@ -101,50 +102,73 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 			<section class="ftco-section">
 	    	<div class="container">
 	    		<div class="row">
-					<div class="col-lg-8 ftco-animate">
-	            		<h1 class="mb-3 font-weight-bold">Joins in SQL</h1>
+	    			<div class="col-lg-8 ftco-animate">
+						<h7><b>Views in SQL</b></h7>
 
-					<span>Written by</span>
+					<p>Written by</p>
 					<h3><a href="index.html"> Carissa O'Connell</a></h3>
-					<p>August 10, 2022; Updated: Jan 2023</p>
+					<p>October. 10, 2022; Updated: Jan 2023</p>
 
 					<!-- Blog -->
-					<main>
-					<p>JOIN is an SQL clause used to query and access data from multiple tables, based on logical relationships between those tables.</p>
-					<p>Check out the <a href="Visual-JOIN-master/joins-index.html">Joins Site</a> for a visual and interactive way to learn about Joins!</p>
+						<h8>Views in SQL</h8>
 
-					<div class="unique-p"> 
-						<h2>Inner Join</h2>
-					</div>
+					<p>A view is “a virtual relation that does not necessarily exist on 
+                        the database but can be produced upon request by a particular user, 
+                        at time of request” (Connolly, Begg, pg. 251). The view creates a 
+                        query that retrieves the data from the database when it is executed, 
+                        and the result is stored in a temporary table or virtual 
+                        table and is shown to the user. 
+                    </p>
 
-					<p>The SQL INNER JOIN returns the records where table1 and table2 intersect.</p>
+						<h9>What is the difference between Dynamic Performance Views and Static Data Dictionary Views?</h9>
 
-					<img src="images/tech/inner-join.png" alt="inner join" class="img-fluid">
+                    <p>
+                        A static data dictionary view is not updated automatically and needs to 
+                        be updated manually whereas the dynamic performance views are updated automatically. 
+                    </p>
+
+						<h9>Static Dictionary View</h9>
+
+						<p></p>
+						<pre><code class="language-static-dictionary-view">DBA_CREDENTIALS
+						</code></pre>
+
+                    <p>
+                        lists all credentials in the database
+                    </p>
+                    
 					<p></p>
+					<pre><code class="language-primary-key01">ALL_CREDENTIALS
+					<br></code></pre>
 
-                    <div class="unique-p"> 
-						<h2>Left Join</h2>
-					</div>
+                    <p>
+                        lists all credentials visible to the user
+                    </p>
 
-					<img src="images/tech/left-join.png" alt="left join" class="img-fluid">
-					<p></p>
+                    <p>
+                        The scenario where this could be useful is when the owner of the database 
+                        could be looking to find out which Windows users are authorized to access 
+                        to the sql server, they could execute one of those commands to find out 
+                        which usernames have access. 
+                    </p>
 
-                    <div class="unique-p"> 
-						<h2>Right Join</h2>
-					</div>
+						<h9>Dynamic Performance View</h9>
 
-					<img src="images/tech/right-join.png" alt="right join" class="img-fluid">
-					<p></p>
+                    <p>
+                        V$SESSION displays session information for each current session. 
+                    </p>
 
-                    <div class="unique-p"> 
-						<h2>Outer Join</h2>
-					</div>
+                    <p>
+                        This could be useful in a situation when we need to find out what occurred 
+                        during the session, by who, and when the command was executed. 
+                    </p>
 
-					<img src="images/tech/outer-join.png" alt="outer join" class="img-fluid">
-					<p></p>
+						<h9>Reference</h9>
 
-					</main>
-					
+                    <p>
+                        Connolly, T. M., & Begg, C. E. (2020). Database systems: A practical approach to design, implementation and management. Pearson India Education Services.  
+                    </p>
+
 					<!-- End Blog -->
 	            
 				  <!-- Blog tags -->
@@ -195,6 +219,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
   
 							  </div>
 	
+	
 							  <ul class="children">
 								<li class="comment">
 								  <div class="vcard bio">
@@ -219,6 +244,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</li>
 					  </ul>
   
+					  <!-- END comment-list -->
+					
 					<!-- Comment Section -->
 					<div class="comment-form-wrap pt-5">
 						<h3 class="mb-5">Leave a comment</h3>

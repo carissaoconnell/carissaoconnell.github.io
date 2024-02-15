@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>blog08</title>
+    <title>blog05</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -39,6 +39,7 @@
 
     <!-- loader stylesheet -->
     <link rel="stylesheet" href="underwater-pure-css-animation/dist/stle.css"> 
+
   </head>
 
   <body>
@@ -50,7 +51,7 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpeg);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Carissa O'Connell</a></h1>
-				<span class="position"><a href="index.html">Software Developer</a> from Hawaii </span>
+				<span class="position"><a href="#">Software Developer</a> from Hawaii </span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
@@ -63,7 +64,7 @@
 						<li><a href="index.html" data-nav-section="experience">Experience</a></li>
 						<li><a href="index.html" data-nav-section="work">Work</a></li>
 						<li class="active"><a href="blog-MainIndex.html" data-nav-section="blog">Blog</a></li>
-						<li><a href="index.html" data-nav-section="contact">Contact</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -89,7 +90,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				<div class="js-fullheight d-flex justify-content-center align-items-center">
 					<div class="col-md-8 text text-center">
 						<div class="desc">
-							<h7 class="subheading"><b>Joins in SQL</b></h7>
+							<h7 class="subheading"><b>Entity Relationship Diagram (ER Diagram) SQL</b></h7>
 							<p><a href="index.html" class="btn-custom mr-2">Home</a></p>
 							<a href="blog-MainIndex.html" class="btn-custom mr-2">Blog</a></p>
 						</div>
@@ -101,50 +102,80 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 			<section class="ftco-section">
 	    	<div class="container">
 	    		<div class="row">
-					<div class="col-lg-8 ftco-animate">
-	            		<h1 class="mb-3 font-weight-bold">Joins in SQL</h1>
+	    			<div class="col-lg-8 ftco-animate">
+	            <h1 class="mb-3 font-weight-bold">Entity Relationship Diagram (ER Diagram) SQL</h1>
 
 					<span>Written by</span>
 					<h3><a href="index.html"> Carissa O'Connell</a></h3>
-					<p>August 10, 2022; Updated: Jan 2023</p>
+					<p>November 20, 2022; Updated: Jan 2023</p>
 
 					<!-- Blog -->
-					<main>
-					<p>JOIN is an SQL clause used to query and access data from multiple tables, based on logical relationships between those tables.</p>
-					<p>Check out the <a href="Visual-JOIN-master/joins-index.html">Joins Site</a> for a visual and interactive way to learn about Joins!</p>
-
 					<div class="unique-p"> 
-						<h2>Inner Join</h2>
+						<p><b>Entity Relationship Diagram (ER Diagram)</b></p>
 					</div>
 
-					<p>The SQL INNER JOIN returns the records where table1 and table2 intersect.</p>
-
-					<img src="images/tech/inner-join.png" alt="inner join" class="img-fluid">
-					<p></p>
+					<p>An ER diagram is a visual representation of the relationships between entities
+                        stored in a database. The diagram acts as a framework of specialized symbols
+                        that define the relationship between the database entities. An ER diagram is based
+                        on three concepts: entities, attributes, and relationships. 
+                    </p>
 
                     <div class="unique-p"> 
-						<h2>Left Join</h2>
+						<p><b>Benefits of an ER Diagram</b></p>
 					</div>
 
-					<img src="images/tech/left-join.png" alt="left join" class="img-fluid">
-					<p></p>
+                    <ul>
+                        <li>Helps to define terms related to entity relationship modeling</li>
+                        <li>Lets you know which fields need to be embedded for a particular entity</li>
+                        <li>Provides a preview of how the tables should connect and which fields are on each table</li>
+                        <li>ER diagrams can be used by database designers as a blueprint for implementing data in specific software applications</li>
+                    </ul>
 
                     <div class="unique-p"> 
-						<h2>Right Join</h2>
+						<p><b>Main components and symbols in an ER diagram:</b></p>
 					</div>
 
-					<img src="images/tech/right-join.png" alt="right join" class="img-fluid">
-					<p></p>
+                    <ul>
+                        <li><b>Rectangles:</b> represents entity types</li>
+                        <li><b>Ellipses:</b> represents attributes</li>
+                        <li><b>Diamonds:</b> represents relationship types</li>
+                        <li><b>Lines:</b> links attributes to entity types and entity types with other relationship types</li>
+                        <li><b>Double Ellipses:</b> represents multivalued attributes</li>
+                        <li><b>Primary Key:</b> attributes are underlined</li>
+                    </ul>
 
                     <div class="unique-p"> 
-						<h2>Outer Join</h2>
+						<p><b>Steps to creating an entity diagram:</b></p>
 					</div>
-
-					<img src="images/tech/outer-join.png" alt="outer join" class="img-fluid">
-					<p></p>
-
-					</main>
-					
+                    <ol>
+                        <li><b>Identify the entities</b></li>
+                            <ul>
+                                <li>An entity can be a person, place, object, event, or concept</li>
+                                <li>An entity is a table that stores data. A strong entity is a table that has a primary key whereas a weak entity does not</li>
+                                <li>A weak entity is one that cannot be uniquely identified by its attributes and must use the attributes of another entity, known as its owner, to be uniquely identified</li>
+                                <li>A strong entity can also be identiified by its own attributes</li>
+                            </ul>
+                        <li><b>Identify the relationships</b></li>
+                            <ul>
+                                <li>Relationships are identified by verbs or verb phrases</li>
+                            </ul>
+                        <li><b>Identify cardinality</b></li>
+                            <ul>
+                                <li>One-to-one relationships</li>
+                                <li>One-to-many relationships</li>
+                                <li>Many-to-one relationships</li>
+                                <li>Many-to-many relationships</li>
+                            </ul>
+                        <li><b>Identify the attributes</b></li>
+                            <ul>
+                                <li>Key attribute - identifies an entity from an entity set</li>
+                                <li>Composite attribute -  is composed of several other attributes </li>
+                                <li>Multivalued attribute - possess more than one value</li>
+                                <li>Derived attribute - is derived from other attributes of the entity</li>
+                            </ul>
+                        <li><b>Create the diagram</b></li>
+                    </ol>
+                    
 					<!-- End Blog -->
 	            
 				  <!-- Blog tags -->
@@ -195,6 +226,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
   
 							  </div>
 	
+	
 							  <ul class="children">
 								<li class="comment">
 								  <div class="vcard bio">
@@ -219,6 +251,9 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</li>
 					  </ul>
   
+					  <!-- END comment-list -->
+					
+
 					<!-- Comment Section -->
 					<div class="comment-form-wrap pt-5">
 						<h3 class="mb-5">Leave a comment</h3>
@@ -485,7 +520,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="jsElen/google-map.js"></script>
   <script src="jsElen/main.js"></script>
-  <script src="codesnippet.js"></script>
+  <script src="codingbox.js"></script>
     
   </body>
 </html>

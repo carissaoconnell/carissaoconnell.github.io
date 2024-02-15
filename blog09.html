@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>blog08</title>
+    <title>blog09</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -39,6 +39,7 @@
 
     <!-- loader stylesheet -->
     <link rel="stylesheet" href="underwater-pure-css-animation/dist/stle.css"> 
+
   </head>
 
   <body>
@@ -89,7 +90,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				<div class="js-fullheight d-flex justify-content-center align-items-center">
 					<div class="col-md-8 text text-center">
 						<div class="desc">
-							<h7 class="subheading"><b>Joins in SQL</b></h7>
+							<h7 class="subheading"><b>Keys in SQL</b></h7>
 							<p><a href="index.html" class="btn-custom mr-2">Home</a></p>
 							<a href="blog-MainIndex.html" class="btn-custom mr-2">Blog</a></p>
 						</div>
@@ -102,56 +103,162 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 	    	<div class="container">
 	    		<div class="row">
 					<div class="col-lg-8 ftco-animate">
-	            		<h1 class="mb-3 font-weight-bold">Joins in SQL</h1>
+	            		<h7><b>Keys in SQL</b></h7>
 
-					<span>Written by</span>
+					<p>Written by</p>
 					<h3><a href="index.html"> Carissa O'Connell</a></h3>
 					<p>August 10, 2022; Updated: Jan 2023</p>
 
 					<!-- Blog -->
+                    <p>In SQL, keys are used to identify specific rows in a table and to find, or create, a relationship between tables.
+                        A key can be a single or combination of multiple fields in a table. Keys are also used to retrieve records (data rows)
+                        from the data table according to the condition or requirement.
+                    </p>
+
+						<h8 id="keys">Keys in SQL: </h8>
+
+                    <ol>
+                        <li><a href="#primary-key">Primary Key</a></li>
+                        <li><a href="#candidate-key">Candidate Key</a></li>
+                        <li><a href="#unique-key">Unique Key</a></li>
+                        <li><a href="#composite-key">Composite Key</a></li>
+                        <li><a href="#super-key">Super Key</a></li>
+                        <li><a href="#alternate-key">Alternate Key</a></li>
+                        <li><a href="#foreign-key">Foreign Key</a></li>
+                    </ol>
+
+                    <!--Primary Key-->
 					<main>
-					<p>JOIN is an SQL clause used to query and access data from multiple tables, based on logical relationships between those tables.</p>
-					<p>Check out the <a href="Visual-JOIN-master/joins-index.html">Joins Site</a> for a visual and interactive way to learn about Joins!</p>
+						<h9 id="primary-key">Primary Key</h9>
 
-					<div class="unique-p"> 
-						<h2>Inner Join</h2>
-					</div>
+                    <p>The primary key in SQL is a single, or a group of fields (columns) that can uniquely identify a row in a table.
+                        The properties of each primary key column or columns are: 
+                    </p>
 
-					<p>The SQL INNER JOIN returns the records where table1 and table2 intersect.</p>
+                    <ul>
+                        <li>It enforces uniqueness by not accepting any duplicate values</li>
+                        <li>A primary key uniquely identifies each field</li>
+                        <li>A table can only take one primary key</li>
+                        <li>A primary key column cannot accept null values</li>
+                        <li>A single-column primary key is a simple one. The one consisting of multiple columns is called a composite primary key</li>
+                        <li>A primary key can be created at a column or table level, using CREATE TABLE or ALTER TABLE statements</li>
+                    </ul>
 
-					<img src="images/tech/inner-join.png" alt="inner join" class="img-fluid">
+						<h9>Adding Primary Key to Table</h9>
+
+                    <p></p>
+					<pre><code class="language-primary-key01">CREATE TABLE fabric(<br>fabric_id int not null PRIMARY KEY,<br>fabric_type varchar(50) not null,<br>fabric_name varchar(50)<br>);
+					</code></pre>
+
+                    <p></p>
+					<pre><code class="language-primary-key02">CREATE TABLE fabric(<br>fabric_id int not null,<br>fabric_type varchar(50) not null,<br>fabric_name varchar(50)<br>PRIMARY KEY (fabric_id)<br>);
+					</code></pre>
+
+                    <p>A primary key can also be defined after the table is created by:</p>
+
+                    <p></p>
+					<pre><code class="language-primary-key03">ALTER TABLE fabric<br>ADD CONSTRAINT pk_fabric PRIMARY KEY (fabric_id);<br>
+					</code></pre>
+
 					<p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
 
-                    <div class="unique-p"> 
-						<h2>Left Join</h2>
-					</div>
+                    <!--Super Key-->
+						<h9 id="super-key">Super Key</h9>
 
-					<img src="images/tech/left-join.png" alt="left join" class="img-fluid">
+					<p>A super key is a set of columns that uniquely identifies each row in a table. 
+						It is a combination of two or more columns that can be used to identify a 
+						record uniquely in a table. Various super keys together makes the criteria to select the candidate keys.
+						A super key is a superset of the candidate key. The role of the super key is simply 
+						to identify the tuples of the specified table in the database.
+					</p>
+
+                    <p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
+
+                    <!--Candidate Key -->
+						<h9 id="candidate-key">Candidate Key</h9>
+
+                    <p>A candidate key is an attribute or set of attributes that can uniquely identify a tuple.
+                        A candidate key can be used as a primary key. A table can have multiple candidate keys and
+                        one can be selected as a primary key.  
+                    </p>
+
+					<pre><code class="language-candidate-key">CREATE TABLE employees(<br>id PRIMARY KEY not null<br>first_name varchar(100),<br>last_name varchar(100),<br>email varchar(260) not null,<br>ssn integer not null,<br>address varchar(200)<br>)
+					</code></pre>
+
+                    <p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
+
+                    <!-- Unique Key -->
+						<h9 id="unique-key">Unique Key</h9>
+
+					<p>A unique key is a set of one or more fields (columns) of a table that uniquely identify a record (row).
+						It can accept one null value but it cannot have duplicate values. There can also be many unique key constraints
+						for a table whereas a PRIMARY KEY  has one constraint. 
+					</p>
+
+					<pre><code class="language-unique-key">CREATE TABLE employees(<br>id int not null UNIQUE,<br>first_name varchar(100),<br>last_name varchar(100) NOT NULL<br>);
+					</code></pre>
+
 					<p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
 
-                    <div class="unique-p"> 
-						<h2>Right Join</h2>
-					</div>
+                    <!--Composite Key-->
+						<h9 id="composite-key">Composite Key</h9>
 
-					<img src="images/tech/right-join.png" alt="right join" class="img-fluid">
+					<p>A composite key, which is also called a compound or concatenated key, is a combination of two or more columns
+					in a table that can be used to uniquely identify each row in the table. A composite key cannot be null.
+					</p>
+
+					<pre><code class="language-composite-key">CREATE TABLE sales_order(<br>customer_id varchar(6) not null,<br>order_id int not null,<br>fabric_name varchar(150) not null,<br>primary key (customer_id, fabric_id)<br>);
+					</code></pre>
+
+                    <p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
+
+                    <!--Alternate Key-->
+					<h9 id="alternate-key">Alternate Key</h9>
+
+					<p>An alternate key is part of a candidate key but not part of the primary key. Alternate keys
+						do not allow duplicate values, can contain null values unless the NOT NULL constrain is set, 
+						and a tale can have more than one alternate key.
+					</p>
+
+					<pre><code class="language-alternate-key">CREATE TABLE CUSTOMERS(<br>ID INT,<br>NAME VARCHAR (20),<br>AGE INT,<br>MOBILE_NO BIGINT,<br>PRIMARY KEY(ID)<br>);
+					</code></pre>
+
 					<p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
 
-                    <div class="unique-p"> 
-						<h2>Outer Join</h2>
-					</div>
+                    <!--Foreign Key-->
+					<h9 id="foreign-key">Foreign Key</h9>
 
-					<img src="images/tech/outer-join.png" alt="outer join" class="img-fluid">
-					<p></p>
+					<p>A Foreign Key is a column in a table that is used as the Primary Key in another table. 
+						It is able to accept multiple nulls and duplicate values.</p>
 
-					</main>
+					  <pre><code class="language-foreign-key">CREATE TABLE Department(<br>dept_id int PRIMARY KEY,<br>name varchar(50) NOT NULL,<br>location varchar(200) NOT NULL<br>)
+					  <br>CREATE TABLE Students (<br>id primary key not null,<br>first_name varchar(100),<br>last_name varchar(100),<br>email varchar(255) not null,<br>registration_no not null Unique,<br>ssn integer not null,<br>residence varchar(200),<br>dept_id int FOREIGN KEY REFERENCES Department(dept_id)<br>)
+					</code></pre>
+
+                    <p></p>
+                    <a href="#keys">Back to index of Keys in SQL</a>
+                    <p></p>
 					
+					</main>
 					<!-- End Blog -->
 	            
 				  <!-- Blog tags -->
 				  <div class="tag-widget post-tag-container mb-5 mt-5">
 					<div class="tagcloud">
 					  <a href="software-blogs.html" class="tag-cloud-link">Software</a>
-					  <a href="software-blogs.html" class="tag-cloud-link">Programming</a>
+					  <a href="sql-blogs.html" class="tag-cloud-link">SQL</a>
 					</div>
 				  </div>
 				  
