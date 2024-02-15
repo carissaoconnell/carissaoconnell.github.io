@@ -314,13 +314,13 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 3.5rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 3rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 2rem; }
 
 h4, .h4 {
   font-size: 1.5rem; }
@@ -7459,7 +7459,7 @@ h1, h2, h3, h4, h5,
       -ms-border-radius: 50%;
       border-radius: 50%; }
     .hero-wrap .text .subheading {
-      font-size: 24px;
+      font-size: 50px;
       color: #bfbfbf;
       font-weight: 300; }
     .hero-wrap .text h1 {
@@ -7886,8 +7886,9 @@ textarea.form-control {
   position: relative; }
 
 .ftco-footer {
-  font-size: 14px;
-  background: #132238;
+  font-size: 18px;
+  background: rgb(0,14,87);
+  background: linear-gradient(90deg, rgba(0,14,87,1) 0%, rgba(0,107,154,1) 35%, rgba(47,211,224,1) 100%);
   padding: 6em 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -7895,7 +7896,7 @@ textarea.form-control {
   .ftco-footer .ftco-footer-widget h2 {
     color: #fff;
     margin-bottom: 40px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px; }
   .ftco-footer .ftco-footer-widget ul li a span {
@@ -7913,7 +7914,7 @@ textarea.form-control {
     .ftco-footer a:hover {
       color: #fff; }
   .ftco-footer .ftco-heading-2 {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 400;
     color: #000000; }
   .ftco-footer .categories li {
