@@ -63,7 +63,8 @@
 						<li><a href="index.html" data-nav-section="education">Education</a></li>
 						<li><a href="index.html" data-nav-section="experience">Experience</a></li>
 						<li><a href="index.html" data-nav-section="work">Work</a></li>
-						<li class="active"><a href="blog-MainIndex.html" data-nav-section="blog">Blog</a></li>
+						<li class="active"><a href="blog-MainIndex.html" data-nav-section="blog">Blogs</a></li>
+						<li><a href="blog-Projects.html" data-nav-section="projects">Projects</a></li>
 						<li><a href="index.html" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
@@ -107,7 +108,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 
 					<p>Written by</p>
 					<h3><a href="index.html"> Carissa O'Connell</a></h3>
-					<p>August 10, 2022; Updated: Jan 2023</p>
+					<p>August 10, 2022; Updated: Jan 2024</p>
 
 					<!-- Blog -->
                     <p>In SQL, keys are used to identify specific rows in a table and to find, or create, a relationship between tables.
@@ -115,7 +116,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
                         from the data table according to the condition or requirement.
                     </p>
 
-						<h8 id="keys">Keys in SQL: </h8>
+					<h8 id="keys">Keys in SQL: </h8>
 
                     <ol>
                         <li><a href="#primary-key">Primary Key</a></li>
@@ -129,7 +130,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 
                     <!--Primary Key-->
 					<main>
-						<h9 id="primary-key">Primary Key</h9>
+					<h10 id="primary-key">Primary Key</h10>
 
                     <p>The primary key in SQL is a single, or a group of fields (columns) that can uniquely identify a row in a table.
                         The properties of each primary key column or columns are: 
@@ -144,28 +145,29 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
                         <li>A primary key can be created at a column or table level, using CREATE TABLE or ALTER TABLE statements</li>
                     </ul>
 
-						<h9>Adding Primary Key to Table</h9>
+					<h9>Adding Primary Key to Table</h9>
 
-                    <p></p>
+                    <p>
 					<pre><code class="language-primary-key01">CREATE TABLE fabric(<br>fabric_id int not null PRIMARY KEY,<br>fabric_type varchar(50) not null,<br>fabric_name varchar(50)<br>);
 					</code></pre>
+					</p>
 
-                    <p></p>
+                    <p>
 					<pre><code class="language-primary-key02">CREATE TABLE fabric(<br>fabric_id int not null,<br>fabric_type varchar(50) not null,<br>fabric_name varchar(50)<br>PRIMARY KEY (fabric_id)<br>);
 					</code></pre>
+					</p>
 
                     <p>A primary key can also be defined after the table is created by:</p>
 
-                    <p></p>
+                    <p>
 					<pre><code class="language-primary-key03">ALTER TABLE fabric<br>ADD CONSTRAINT pk_fabric PRIMARY KEY (fabric_id);<br>
 					</code></pre>
+					</p>
 
-					<p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+					<p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!--Super Key-->
-						<h9 id="super-key">Super Key</h9>
+					<h10 id="super-key">Super Key</h10>
 
 					<p>A super key is a set of columns that uniquely identifies each row in a table. 
 						It is a combination of two or more columns that can be used to identify a 
@@ -174,56 +176,54 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						to identify the tuples of the specified table in the database.
 					</p>
 
-                    <p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+                    <p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!--Candidate Key -->
-						<h9 id="candidate-key">Candidate Key</h9>
+					<h10 id="candidate-key">Candidate Key</h10>
 
                     <p>A candidate key is an attribute or set of attributes that can uniquely identify a tuple.
                         A candidate key can be used as a primary key. A table can have multiple candidate keys and
                         one can be selected as a primary key.  
                     </p>
 
+					<p>
 					<pre><code class="language-candidate-key">CREATE TABLE employees(<br>id PRIMARY KEY not null<br>first_name varchar(100),<br>last_name varchar(100),<br>email varchar(260) not null,<br>ssn integer not null,<br>address varchar(200)<br>)
 					</code></pre>
+					</p>
 
-                    <p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+                    <p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!-- Unique Key -->
-						<h9 id="unique-key">Unique Key</h9>
+					<h10 id="unique-key">Unique Key</h10>
 
 					<p>A unique key is a set of one or more fields (columns) of a table that uniquely identify a record (row).
 						It can accept one null value but it cannot have duplicate values. There can also be many unique key constraints
 						for a table whereas a PRIMARY KEY  has one constraint. 
 					</p>
 
+					<p>
 					<pre><code class="language-unique-key">CREATE TABLE employees(<br>id int not null UNIQUE,<br>first_name varchar(100),<br>last_name varchar(100) NOT NULL<br>);
 					</code></pre>
-
-					<p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+					</p>
+                    
+                    <p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!--Composite Key-->
-						<h9 id="composite-key">Composite Key</h9>
+					<h10 id="composite-key">Composite Key</h10>
 
 					<p>A composite key, which is also called a compound or concatenated key, is a combination of two or more columns
 					in a table that can be used to uniquely identify each row in the table. A composite key cannot be null.
 					</p>
 
+					<p>
 					<pre><code class="language-composite-key">CREATE TABLE sales_order(<br>customer_id varchar(6) not null,<br>order_id int not null,<br>fabric_name varchar(150) not null,<br>primary key (customer_id, fabric_id)<br>);
 					</code></pre>
+					</p>
 
-                    <p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+                    <p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!--Alternate Key-->
-					<h9 id="alternate-key">Alternate Key</h9>
+					<h10 id="alternate-key">Alternate Key</h10>
 
 					<p>An alternate key is part of a candidate key but not part of the primary key. Alternate keys
 						do not allow duplicate values, can contain null values unless the NOT NULL constrain is set, 
@@ -233,12 +233,10 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<pre><code class="language-alternate-key">CREATE TABLE CUSTOMERS(<br>ID INT,<br>NAME VARCHAR (20),<br>AGE INT,<br>MOBILE_NO BIGINT,<br>PRIMARY KEY(ID)<br>);
 					</code></pre>
 
-					<p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+					<p><a href="#keys">Back to index of Keys in SQL</a></p>
 
                     <!--Foreign Key-->
-					<h9 id="foreign-key">Foreign Key</h9>
+					<h10 id="foreign-key">Foreign Key</h10>
 
 					<p>A Foreign Key is a column in a table that is used as the Primary Key in another table. 
 						It is able to accept multiple nulls and duplicate values.</p>
@@ -247,9 +245,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					  <br>CREATE TABLE Students (<br>id primary key not null,<br>first_name varchar(100),<br>last_name varchar(100),<br>email varchar(255) not null,<br>registration_no not null Unique,<br>ssn integer not null,<br>residence varchar(200),<br>dept_id int FOREIGN KEY REFERENCES Department(dept_id)<br>)
 					</code></pre>
 
-                    <p></p>
-                    <a href="#keys">Back to index of Keys in SQL</a>
-                    <p></p>
+                    <p><a href="#keys">Back to index of Keys in SQL</a></p>
+
 					
 					</main>
 					<!-- End Blog -->
@@ -257,8 +254,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				  <!-- Blog tags -->
 				  <div class="tag-widget post-tag-container mb-5 mt-5">
 					<div class="tagcloud">
-					  <a href="software-blogs.html" class="tag-cloud-link">Software</a>
-					  <a href="sql-blogs.html" class="tag-cloud-link">SQL</a>
+						<a href="sql-blogs.html" class="tag-cloud-link">SQL</a>
+						<a href="software-blogs.html" class="tag-cloud-link">Software</a>
 					</div>
 				  </div>
 				  
@@ -361,8 +358,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				  <!-- .col-md-8 -->
 				  <!-- End Comment Section -->
 	
-				  <!-- Side bar area -->
-				  <div class="col-lg-4 sidebar ftco-animate">
+				 <!-- Side bar area -->
+				 <div class="col-lg-4 sidebar ftco-animate">
 					<div class="sidebar-box">
 					  <form action="#" class="search-form">
 						<div class="form-group">
@@ -373,70 +370,70 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					</div>
 					<div class="sidebar-box ftco-animate">
 						<h3 class="sidebar-heading">Categories</h3>
-					  <ul class="categories">
-						<li><a href="software-blogs.html">Software<span></span></a></li>
-						<li><a href="data-structures-and-algorithms-blogs.html">Data Structures<span></span></a></li>
-						<li><a href="system-managment-blogs.html">System Managment<span></span></a></li>
-						<li><a href="data-architecture-blogs.html">Data Architecture<span></span></a></li>
-						<li><a href="sql-blogs.html">SQL<span></span></a></li>
-						<li><a href="java-blogs.html">Java<span></span></a></li>
-						<li><a href="c++blogs.html">C++<span></span></a></li>
-					  </ul>
+						<ul class="categories">
+							<li><a href="blogs-software.html">Software<span></span></a></li>
+							<li><a href="blogs-data-structures-and-algorithms.html">Data Structures<span></span></a></li>
+							<li><a href="blogs-system-managment.html">System Managment<span></span></a></li>
+							<li><a href="blogs-data-architecture.html">Data Architecture<span></span></a></li>
+							<li><a href="blogs-sql.html">SQL<span></span></a></li>
+							<li><a href="blogs-java.html">Java<span></span></a></li>
+							<li><a href="blogs-c++.html">C++<span></span></a></li>
+						  </ul>
 					</div>
 	
 					<!--Popular Articles -->
-					<!--Popular Article 1 -->
-					<div class="sidebar-box ftco-animate">
-					  <h3 class="sidebar-heading">Popular Articles</h3>
-					  <div class="block-21 mb-4 d-flex">
-						<a class="blog-img mr-4" style="background-image: url(images/tech/computer-vegetation.jpg);"></a>
-						<div class="text">
-						  <h3 class="heading"><a href="blog01.html">Software Methodologies</a></h3>
-						  <div class="meta">
-							<div><a><span i class="glyphicon glyphicon-calendar"></i></span> Nov 2023</a></div>
-							<div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
-							<div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
+						<!--Popular Article 1 -->
+						<div class="sidebar-box ftco-animate">
+							<h3 class="sidebar-heading">Popular Articles</h3>
+							<div class="block-21 mb-4 d-flex">
+							  <a class="blog-img mr-4" style="background-image: url(images/tech/computer-vegetation.jpg);"></a>
+							  <div class="text">
+								<h3 class="heading"><a href="blog01.html">Software Methodologies</a></h3>
+								<div class="meta">
+								  <div><a><span i class="glyphicon glyphicon-calendar"></i></span> Nov 2023</a></div>
+								  <div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
+								  <div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
+								</div>
+							  </div>
+							</div>
+							<!--Popular Article 2 -->
+							<div class="block-21 mb-4 d-flex">
+							  <a class="blog-img mr-4" style="background-image: url(images/tech/lightbulb-ideas.jpg);"></a>
+							  <div class="text">
+								<h3 class="heading"><a href="blog05.html">Entity Relationship (ER) Diagrams</a></h3>
+								<div class="meta">
+								  <div><a><span i class="glyphicon glyphicon-calendar"></i></span> Oct 2023</a></div>
+								  <div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
+								  <div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
+								</div>
+							  </div>
+							</div>
+							<!--Popular Article 3 -->
+							<div class="block-21 mb-4 d-flex">
+							  <a class="blog-img mr-4" style="background-image: url(images/tech/data-economy.jpg);"></a>
+							  <div class="text">
+								<h3 class="heading"><a href="blog03.html">Data Algorithms</a></h3>
+								<div class="meta">
+								  <div><a><span i class="glyphicon glyphicon-calendar"></i></span> Aug 2022</a></div>
+								  <div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
+								  <div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
+								</div>
+							  </div>
+							</div>
 						  </div>
-						</div>
-					  </div>
-					  <!--Popular Article 2 -->
-					  <div class="block-21 mb-4 d-flex">
-						<a class="blog-img mr-4" style="background-image: url(images/tech/lightbulb-ideas.jpg);"></a>
-						<div class="text">
-						  <h3 class="heading"><a href="blog05.html">Entity Relationship (ER) Diagrams</a></h3>
-						  <div class="meta">
-							<div><a><span i class="glyphicon glyphicon-calendar"></i></span> Oct 2023</a></div>
-							<div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
-							<div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
-						  </div>
-						</div>
-					  </div>
-					  <!--Popular Article 3 -->
-					  <div class="block-21 mb-4 d-flex">
-						<a class="blog-img mr-4" style="background-image: url(images/tech/data-economy.jpg);"></a>
-						<div class="text">
-						  <h3 class="heading"><a href="blog03.html">Data Algorithms</a></h3>
-						  <div class="meta">
-							<div><a><span i class="glyphicon glyphicon-calendar"></i></span> Aug 2022</a></div>
-							<div><a href="index.html"><span i class="glyphicon glyphicon-user"></span> Carissa O'Connell</a></div>
-							<div><a><span i class="glyphicon glyphicon-comment"></span> </a></div>
-						  </div>
-						</div>
-					  </div>
-					</div>
 	
 					<!-- Tag Cloud -->
 					<div class="sidebar-box ftco-animate">
 					  <h3 class="sidebar-heading">Tag Cloud</h3>
 					  <ul class="categories">
-						  <li><a href="software-blogs.html">Software <span></span></a></li>
-						  <li><a href="data-structures-and-algorithms-blogs.html">Data Structures <span></span></a></li>
-						  <li><a href="system-managment-blogs.html">System Managment <span></span></a></li>
-						  <li><a href="data-architecture-blogs.html">Data Architecture<span></span></a></li>
-						  <li><a href="sql-blogs.html">SQL<span></span></a></li>
-						  <li><a href="java-blogs.html">Java<span></span></a></li>
-						  <li><a href="c++blogs.html">C++<span></span></a></li>
-						</ul>
+						<li><a href="blogs-software.html">Software<span></span></a></li>
+						<li><a href="blogs-data-structures-and-algorithms.html">Data Structures<span></span></a></li>
+						<li><a href="blogs-system-managment.html">System Managment<span></span></a></li>
+						<li><a href="blogs-data-architecture.html">Data Architecture<span></span></a></li>
+						<li><a href="blogs-sql.html">SQL<span></span></a></li>
+						<li><a href="blogs-java.html">Java<span></span></a></li>
+						<li><a href="blogs-c++.html">C++<span></span></a></li>
+					  </ul>
 					</div>
 	
 					<div class="sidebar-box subs-wrap img" style="background-image: url(images/bg_1.jpg);">
@@ -463,27 +460,27 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					</div>
 				  </div>
 				  <!-- END COL -->
-	    		</div>
-	    	</div>
-	    </section>
-		<!-- End Side Bar -->
-
-		<!-- Bottom section -->
-		<!-- Footer -->
-	    <footer class="ftco-footer ftco-bg-dark ftco-section">
-			<div class="container px-md-5">
-			  <div class="row mb-5">
-				<div class="col-md">
-				  <div class="ftco-footer-widget mb-4 ml-md-4">
-					<h2 class="ftco-heading-2">Category</h2>
-					<ul class="categories">
-						<li><a href="software-blogs.html">Software <span></span></a></li>
-						<li><a href="data-structures-and-algorithms-blogs.html">Data Structures <span></span></a></li>
-						<li><a href="system-managment-blogs.html">System Managment <span></span></a></li>
-						<li><a href="data-architecture-blogs.html">Data Architecture<span></span></a></li>
-						<li><a href="sql-blogs.html">SQL<span></span></a></li>
-						<li><a href="java-blogs.html">Java<span></span></a></li>
-						<li><a href="c++blogs.html">C++<span></span></a></li>
+	
+				  <!-- Bottom Section -->
+					</div>
+				</div>
+			</section>
+	
+			<!-- Footer -->
+			<footer class="ftco-footer ftco-bg-dark ftco-section">
+			  <div class="container px-md-5">
+				<div class="row mb-5">
+				  <div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-4">
+					  <h2 class="ftco-heading-2">Topics</h2>
+					  <ul class="categories">
+						<li><a href="blogs-software.html">Software<span></span></a></li>
+						<li><a href="blogs-data-structures-and-algorithms.html">Data Structures<span></span></a></li>
+						<li><a href="blogs-system-managment.html">System Managment<span></span></a></li>
+						<li><a href="blogs-data-architecture.html">Data Architecture<span></span></a></li>
+						<li><a href="blogs-sql.html">SQL<span></span></a></li>
+						<li><a href="blogs-java.html">Java<span></span></a></li>
+						<li><a href="blogs-c++.html">C++<span></span></a></li>
 					  </ul>
 				  </div>
 				</div>
