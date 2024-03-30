@@ -476,8 +476,28 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<!-- Twenty First point -->
 					<p><h8 id="kahn"><b>21. Kahn's Topological Sort Algorithm</b></h8></p>
 				
-					<p>
+					<p>The topological sort algorithm arranges the vertices in a Directed Acyclic Graph (DAG) linearly. 
+						It returns an array, vector, or list, that consists of the nodes where each node appears BEFORE
+						all the nodes it points to. 
 					</p>
+
+					<h10>Algorithms to find Topological Sorting:</h10>
+					<ul>
+						<li>Kahn's Algorithm</li>
+						<li>Depth-first Search</li>
+					</ul>
+
+					<p>In Khan's algorithm of toplogical sort, it looks for the nodes that do not have any incoming
+						edges, or has an indegree of 0, and then removes their outgoing edges (making its outdegree equal to 0).
+					</p>
+
+					<h10>Steps for Khan's algorithm:</h10>
+					<ol>
+						<li>Find a vertex that has an indegree of 0 (it has no incoming edges)</li>
+						<li>Remove all the edges from that vertex that go outward (makes outdegree = 0, remove outgoing edges)</li>
+						<li>Add that vertex to the array representing the topological sorting of the graph</li>
+						<li>Repeat till there are no vertices left</li>
+					</ol>
 
 					<p><a href="https://www.scaler.com/topics/data-structures/topological-sort-algorithm/">Read more about Kahn's Topological Sort Algorithm at Scaler</a></p>
 
@@ -487,10 +507,21 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<!-- Twenty Second point -->
 					<p><h8 id="huffman-coding-compression"><b>22. Huffman Coding Compression Algorithm</b></h8></p>
 				
-					<p>
+					<p>Huffman Coding is a technique of compressing data to reduce its size without losing any of the details.
+						It does this by using variable-length strings to represent symbols depending on how frequently they appear. 
 					</p>
 
+					<p>The Huffman coding algorithm takes in information about the frequencies or probabilities of a particular 
+						symbol occurring. It begins to build the prefix tree from the bottom up, starting with the two least 
+						probable symbols in the list. It takes those symbols and forms a subtree containing them, and then 
+						removes the individual symbols from the list. <h10><b>The algorithm sums the probabilities of elements in a 
+							subtree and adds the subtree and its probability to the list.</b></h10> 
+						Next, the algorithm searches the list and selects the two symbols or subtrees with the smallest probabilities. 
+						It uses those to make a new subtree, removes the original subtrees/symbols from the list, and then adds the new subtree and its 
+						combined probability to the list. This repeats until there is one tree and all elements have been added.</p>
+
 					<p><a href="https://www.programiz.com/dsa/huffman-coding">Read more about the Huffman Coding Compression Algorithm at Programiz</a></p>
+					<p><a href="https://brilliant.org/wiki/huffman-encoding/#_=_">Read more about the Huffman Coding Compression Algorithm at Brilliant</a></p>
 
 					<p><a href="#algorithms">Back to index of Algorithms</a></p>
 
@@ -498,10 +529,38 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<!-- Twenty Third point -->
 					<p><h8 id="quickselect"><b>23. Quickselect Algorithm</b></h8></p>
 				
-					<p>
+					<p>The Quick Select Algorithm is an efficient selection algorithm that is used to find the k-th smallest
+						element in an unordered list. It is an in-place algorithm, meaning that it doesn't require any additional 
+						memory to be allocated apart from input list space. Similar to Quick Sort, the Quick Select Algorithm is 
+						also based on the divide-and-conquer paradigm, using the concept of partitioning the elements of the input list. 
 					</p>
 
-					<p><a href="https://javascript.algorithmexamples.com/web/Data-Structures/Array/QuickSelect.html">Read more about the Quickselect Algorithm Algorithm at Algorithm Examples</a></p>
+					<p>QuickSort is a fast sorting algorithm that works by splitting a large array of data into smaller sub-arrays. 
+						This implies that each iteration splits the input into two components, sorts them and then recombines them. 
+						The technique is highly efficient for big data sets because its average and best-case complexity is O(n*logn).</p>
+
+						<ol>
+							<li><h10>Select a Pivot Element</h10></li>
+								<ul>
+									<li>It can be a random element</li>
+									<li>The first or last element</li>
+									<li>Middle element</li>
+								</ul>
+
+							<li><h10>Rearrange the Array</h10></li>
+								<ul>
+									<li>The pivot element is compared to all of the items starting with the first index. If the element is greater than the pivot element, a second pointer is appended.</li>
+									<li>When compared to other elements, if a smaller element than the pivot element is found, the smaller element is swapped with the larger element identified before.</li>
+								</ul>
+
+							<li><h10>Divide the Subarrays</h10></li>
+								<ul>
+									<li>First, sort the segment of the array to the left of the pivot, and then sort the segment of the array to the right of the pivot.</li>
+								</ul>
+						</ol>
+
+					<p><a href="https://javascript.algorithmexamples.com/web/Data-Structures/Array/QuickSelect.html">Read more about the Quickselect Algorithm at Algorithm Examples</a></p>
+					<p><a href="https://builtin.com/articles/quicksort#">Read more about the Quickselect Algorithm at Built In</a></p>
 
 					<p><a href="#algorithms">Back to index of Algorithms</a></p>
 
