@@ -568,9 +568,23 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<!-- Twenty Fourth point -->
 					<p><h8 id="boyer-moore-majority-vote"><b>24. Boyer-Moore Majority Vote Algorithm</b></h8></p>
 				
-					<p>
-						
+					<p> The Boyer-Moore voting method is used for determinig the majority elemnt amongst elements with more than N/2 occurences.</p>
+					<p>This algorithm has two phases: <i>finding the majority element</i> and <i>counting how many times it appears in the array.</i></p>
+
+					<p>The majority elemnt is one that appears more than half of the time in the input elements.
+						However, if there is no majority, the algorithm will not recognize this and will continue to output one of the items.
 					</p>
+
+					<h10><b>The Algorithm</b></h10>
+					<ol>
+						<li>Begin by initializing two variables, num and a counter count, both of which are set to 0.</li>
+						<li>Now we’ll begin iterating over the number and for each element x.</li>
+						<li>We first check to see if the count is 0, and then we assign num to x.</li>
+						<li>Then we check to see if the current num is equal to x, if not, we decrease the count by one, else we increment it by one.</li>
+						<li>Reset the counter to zero.</li>
+						<li>Find the frequency of the num variable by looping through the nums array.</li>
+						<li>Now, if the count is larger than N/2, we return num; otherwise we return -1.</li>
+					</ol>
 
 					<p><a href="https://www.topcoder.com/thrive/articles/boyer-moore-majority-vote-algorithm">Read more about the Boyer-Moore Majority Vote Algorithm at Top Coder</a></p>
 
@@ -579,7 +593,16 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<!-- Twenty Fifth point -->
 					<p><h8 id="euclid"><b>25. Euclid's Algorithm</b></h8></p>
 
-					<p>
+					<p>The Euclidian Algorithm is a recursive algorithm that will find the highest common factor (HCF) of two numbers.
+						The HCF is the largest value that will divide without a remainder for both values. It is base on the obeservation that
+						the 
+						<h10>HCF can be found iteratively using the following steps:</h10>
+						<ol>
+							<li>Find the minimum value between two given numbers</li>
+							<li>Then, divide both numbers by the minimum value</li>
+							<li>If either of the divisions results in a remainder, decrease the minimum value by one and continue dividing</li>
+							<li>This process repeats until the minimum value can divide both numbers evenly; that is the HCF</li>
+						</ol>
 					</p>
 
 					<p><a href="https://www.codecademy.com/resources/docs/general/algorithm/euclidean-algorithm">Read more about the Euclid's Algorithm Algorithm at CodeCademy</a></p>
