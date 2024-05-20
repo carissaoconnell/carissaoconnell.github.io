@@ -32,7 +32,8 @@ a {
     text-decoration: none !important; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em; 
+}
 
 h7 {
   margin-top: 0px;
@@ -76,6 +77,15 @@ h11 {
   font-size: 5rem;
   background-image: linear-gradient(to bottom, #2196f3, #26c6da, #fdbb2d, #ff5722);
   /*background: linear-gradient(to right, #2196f3, #26c6da, #9fdd3f, #6dc046, #3ea148, #048346);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h12 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 3.5rem;
+  background: linear-gradient(to right, #26c6da, #0021D8, #040101);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
