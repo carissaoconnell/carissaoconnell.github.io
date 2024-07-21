@@ -53,33 +53,29 @@
 				<h1 id="colorlib-logo"><a href="index.html">Carissa O'Connell</a></h1>
 				<span class="position"><a href="index.html">Full Stack Software Developer</a> currently in Florida </span>
 			</div>
+		
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
 					<ul>
 						<li><a href="index.html" data-nav-section="home">Home</a></li>
-						<li><a href="index.html" data-nav-section="about">About</a></li>
-						<li><a href="index.html" data-nav-section="services">Craftmanship</a></li>
-						<li><a href="index.html" data-nav-section="skills">Skills</a></li>
-						<li><a href="index.html" data-nav-section="education">Education</a></li>
-						<li><a href="index.html" data-nav-section="experience">Experience</a></li>
+						<li><a href="index-about.html" data-nav-section="about">About</a></li>
 						<li><a href="blog-Projects.html" data-nav-section="projects">Projects</a></li>
 						<li class="active"><a href="blog-MainIndex.html" data-nav-section="blog">Blogs</a></li>
 					</ul>
 				</div>
 			</nav>
-
+		
 			<div class="colorlib-footer">
-					<ul>
-						<li><a href="mailto:modern.program.geek@gmail.com"><i class="icon-mail"></i></a></li>
-						<li><a href="#"><i class="icon-instagram"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/carissa-oconnell/"><i class="icon-linkedin2"></i></a></li>
-					</ul>
+				<ul>
+					<li><a href="mailto:modern.program.geek@gmail.com"><i class="icon-mail"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/carissa-oconnell/"><i class="icon-linkedin2"></i></a></li>
+				</ul>
 			</div>
-
-			<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved. Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span></small></p>
-
+		
+		<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved. Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span></small></p>
+		
 		</aside>
 		<!-- END COLORLIB-ASIDE -->
 
@@ -116,8 +112,19 @@
                     </p>
 
 					<p><h9><b>While Loop</b></h9></p>
+					<p>A SQL WHILE loop is a control-flow statement that allows code to execute repeatedly based on a given 
+						Boolean condition. The loop continues until the condition becomes false.</p>
 
-					<p><h9><b>Infinite While Loop</b></h9></p>
+						<pre><code class="language-static-dictionary-view">DECLARE @counter INT = 1; -- Initialize counter
+
+							WHILE @counter <= 10 -- Condition for the loop
+							BEGIN
+							   PRINT 'Inside WHILE loop'; -- Code to be executed
+							   SET @counter = @counter + 1; -- Increment counter
+							END;
+							
+							PRINT 'Done with WHILE loop';
+						</code></pre>
 
 					<p><h9><b>For Loop</b></h9></p>
 
@@ -482,7 +489,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="jsElen/google-map.js"></script>
   <script src="jsElen/main.js"></script>
-  <script src="codingbox.js"></script>
+  <script src="codesnippet.js"></script>
     
   </body>
 </html>
