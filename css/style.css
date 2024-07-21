@@ -90,6 +90,105 @@ h12 {
   -webkit-text-fill-color: transparent;
 }
 
+/* Cards on Home page */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a grid with 2 columns */
+  grid-gap: 30px;
+}
+
+.card-wrapper {
+  display: contents; /* or display: grid */
+}
+
+.card {
+  background-color: transparent; /* remove background color */
+  padding: 30px; /* increased padding to make the card taller */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 350px; /* Set a minimum width to make the card wider */
+  max-width: 400px; /* Set a maximum width to prevent the card from getting too wide */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-image-bottom {
+  width: 75%; /* take up the full width of the card */
+  height: 75%; /* adjust the height to your liking */
+  object-fit: cover; /* ensure the image is scaled to cover the entire area */
+  border-radius: 10px 10px 10px 10px; /* add a border radius to the bottom corners */
+  margin: 0 auto; /* add margin: 0 auto to center the image horizontally */
+  display: block; /* make the image a block element */
+}
+
+.card-body h3 {
+  margin-top: 0;
+  overflow: hidden; /* prevent title from overflowing */
+  word-break: break-word; /* break long words to new line */
+}
+
+.card:hover .card-image {
+  transform: scale(1.1); /* Scale the image on hover */
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* Move the card up and scale it on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-learn {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background-color: #23527c;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr); /* Change to 1 column */
+  }
+}
+
+/* END Cards on Home page */
+
+/* index - project section - hover for items*/
+.work-menu span {
+  transition: box-shadow 0.2s ease-in-out; /* add transition effect */
+  padding: 10px 10px; /* add 5px padding on left and right */
+}
+
+.work-menu span:hover {
+  outline: 3px solid #00d5ff; /* show thicker outline on hover */
+  cursor: pointer; /* change cursor to pointer on hover */
+}
+
+
 /* code snippet box */
 
 *,
@@ -230,6 +329,7 @@ figure {
       padding: 0; }
 
   @media screen and (max-width: 768px) {
+
     #colorlib-aside #colorlib-main-menu ul {
       margin: 0 0 2em 0; } 
   }
@@ -546,7 +646,8 @@ body.offcanvas {
 
 .hire {
   padding: 2em;
-  background: #f9bf3f; }
+  background: linear-gradient(to bottom right, #2196f3, #26c6da, #43a047, #f9a825, #ff5722);
+}
   .hire h2 {
     line-height: 1.5; }
   .hire .btn-hire {
@@ -1504,6 +1605,7 @@ body.offcanvas {
       visibility: visible; } }
 
 @media screen and (max-width: 480px) {
+
   .col-xxs-12 {
     float: none;
     width: 100%; } }
@@ -1533,4 +1635,6 @@ body.offcanvas {
   padding: 10px !important; }
 
 .js .animate-box {
-  opacity: 0; }
+  opacity: 0; 
+  padding: 20px;
+}
