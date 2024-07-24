@@ -11,12 +11,6 @@
 *	Edit this section
 *
 * ======================================================= */
-
-/*
-#colorlib-aside .position 
-to edit the stack for the items in the nav aside section
-*/
-
 body {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
@@ -33,7 +27,7 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s; }
   a:hover, a:active, a:focus {
-    color: #02ae04;
+    color: #2c98f0;
     outline: none;
     text-decoration: none !important; }
 
@@ -94,13 +88,6 @@ h12 {
   background: linear-gradient(to right, #26c6da, #0021D8, #040101);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* Navigation */
-#colorlib-aside .aside-menu {
-  display: flex; /* Enable Flexbox */
-  flex-direction: column; /* Stack items vertically */
-  gap: 0em; /* Add spacing between items */
 }
 
 /* Cards on Home page */
@@ -412,13 +399,11 @@ figure {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%; }
-    /*
   #colorlib-aside .position {
     display: block;
     margin-bottom: 2em;
     font-size: 12px;
     text-transform: uppercase; }
-    */
   #colorlib-aside #colorlib-logo {
     text-align: right;
     font-weight: 700;
@@ -808,8 +793,7 @@ body.offcanvas {
   font-weight: 400;
   top: 50%;
   line-height: 1;
-  margin-top: -7px;
- }
+  margin-top: -7px; }
 
 .panel-heading a.collapsed:after {
   content: "\e114"; }
